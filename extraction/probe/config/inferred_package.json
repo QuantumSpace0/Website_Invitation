@@ -1,0 +1,22 @@
+{
+  "name": "saiyam-jenny-invitationmedia-in",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "*",
+    "@radix-ui/react-dropdown-menu": "*",
+    "@radix-ui/react-tooltip": "*",
+    "lucide-react": "^0.400.0",
+    "recharts": "^2.0.0",
+    "immer": "^10.0.0",
+    "cmdk": "^1.0.0",
+    "sonner": "^1.0.0"
+  },
+  "devDependencies": {}
+}

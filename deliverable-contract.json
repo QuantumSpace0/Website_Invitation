@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "checks": [
+    {
+      "id": "mirror-dir",
+      "label": "mirror/ exists",
+      "path": "mirror",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "mirror-index",
+      "label": "mirror/index.html exists",
+      "path": "mirror/index.html",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "mirror-manifest",
+      "label": "mirror/manifest.json exists",
+      "path": "mirror/manifest.json",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "mirror-serve",
+      "label": "mirror/serve.mjs exists",
+      "path": "mirror/serve.mjs",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "source-dir",
+      "label": "source/ exists",
+      "path": "source",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "source-package",
+      "label": "source/package.json exists",
+      "path": "source/package.json",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "source-page",
+      "label": "source/app/page.tsx exists",
+      "path": "source/app/page.tsx",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "source-build",
+      "label": "source build passed",
+      "required": true,
+      "status": "pass",
+      "message": "ok"
+    },
+    {
+      "id": "design-root",
+      "label": "site-level DESIGN.md exists",
+      "path": "DESIGN.md",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "design-json",
+      "label": "design/design-system.json exists",
+      "path": "design/design-system.json",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "design-dtcg",
+      "label": "design/tokens.dtcg.json exists",
+      "path": "design/tokens.dtcg.json",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "design-stage",
+      "label": "design stage reported success",
+      "required": true,
+      "status": "pass",
+      "message": "ok"
+    },
+    {
+      "id": "runtime-source-design",
+      "label": "source/design.md exists",
+      "path": "source/design.md",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "runtime-metadata",
+      "label": "source/lib/runtime-metadata.json exists",
+      "path": "source/lib/runtime-metadata.json",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "runtime-recovered-manifest",
+      "label": "source/runtime-recovered/semantic-runtime-manifest.json exists",
+      "path": "source/runtime-recovered/semantic-runtime-manifest.json",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "verify-report",
+      "label": "verify/report.json exists",
+      "path": "verify/report.json",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "verify-html",
+      "label": "verify/diff-report.html exists",
+      "path": "verify/diff-report.html",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    },
+    {
+      "id": "verify-metrics",
+      "label": "verify produced pixel metrics",
+      "required": true,
+      "status": "pass",
+      "message": "ok"
+    },
+    {
+      "id": "behavior-manifest",
+      "label": "behavior extraction skipped by flag",
+      "required": false,
+      "status": "skipped",
+      "message": "skipped"
+    },
+    {
+      "id": "research-index",
+      "label": "research skipped by flag",
+      "required": false,
+      "status": "skipped",
+      "message": "skipped"
+    },
+    {
+      "id": "recovery-report",
+      "label": "recovery-report.md exists",
+      "path": "recovery-report.md",
+      "required": true,
+      "status": "pass",
+      "message": "found"
+    }
+  ],
+  "blockers": [],
+  "warnings": [],
+  "provenance": [
+    {
+      "artifact": "mirror/",
+      "label": "byte-preserved",
+      "confidence": "high",
+      "note": "Original browser-loaded runtime captured locally and URL-rewritten."
+    },
+    {
+      "artifact": "source/",
+      "label": "runtime-preserved",
+      "confidence": "high",
+      "note": "React shell wraps the exact mirror runtime. Shell code is editable; iframe runtime remains authoritative."
+    },
+    {
+      "artifact": "extraction/observation/",
+      "label": "decompiled",
+      "confidence": "low",
+      "note": "Runtime classifier mode: visual-spec."
+    }
+  ],
+  "sourceEditability": {
+    "status": "runtime-preserved",
+    "label": "Runtime preserved source shell",
+    "authoredRecovered": 0,
+    "compiledOnly": 0,
+    "decompiledCount": 0,
+    "activeSwappedCount": 0,
+    "stableHighCandidates": 0,
+    "compiledOnlyRemaining": 0,
+    "synthesized": 0,
+    "authoredCopied": false,
+    "compiledPreserved": false,
+    "note": "source/ wraps the exact runtime. Native modules are not authoritative until separately verified."
+  },
+  "framerDecompile": {
+    "status": "not-applicable",
+    "compiledDir": "source/components/compiled/framer_site",
+    "summaryPath": null,
+    "swapSummaryPath": null,
+    "compiledOnlyTotal": 0,
+    "decompiledCount": 0,
+    "stableHighCandidates": 0,
+    "activeSwappedCount": 0,
+    "activeCompiledWrapperCount": 0,
+    "compiledOnlyRemaining": 0,
+    "candidates": [],
+    "confidence": {
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "blocked": 0,
+      "unknown": 0
+    },
+    "blockers": [],
+    "swapSummaryDisagreements": []
+  },
+  "reportPath": "recovery-report.md",
+  "jsonPath": "deliverable-contract.json"
+}

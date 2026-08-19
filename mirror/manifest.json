@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-19T08:54:42.977Z",
+  "url": "https://saiyam-jenny.invitationmedia.in/",
+  "finalUrl": "https://saiyam-jenny.invitationmedia.in/",
+  "title": "Wedding Invitation",
+  "targetHost": "saiyam-jenny.invitationmedia.in",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "mirroredHosts": [
+    "saiyam-jenny.invitationmedia.in",
+    "fonts.googleapis.com",
+    "fonts.gstatic.com"
+  ],
+  "stats": {
+    "captured": 9,
+    "bytes": 615724,
+    "skippedTelemetry": 0,
+    "skippedFailed": 0,
+    "skippedTooLarge": 0,
+    "apiReplays": 1,
+    "requestErrors": 0,
+    "wsCaptured": 0,
+    "wsFrames": 0
+  },
+  "responses": [
+    {
+      "url": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "localPath": "/saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css",
+      "size": 67038
+    },
+    {
+      "url": "https://saiyam-jenny.invitationmedia.in/fonts/Candlescript.otf",
+      "method": "GET",
+      "status": 200,
+      "contentType": "font/otf",
+      "localPath": "/saiyam-jenny.invitationmedia.in/fonts/Candlescript.otf",
+      "size": 16560
+    },
+    {
+      "url": "https://saiyam-jenny.invitationmedia.in/",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "localPath": "/saiyam-jenny.invitationmedia.in/index.html",
+      "size": 1807
+    },
+    {
+      "url": "https://saiyam-jenny.invitationmedia.in/assets/index-CNKK6fD1.js",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "localPath": "/saiyam-jenny.invitationmedia.in/assets/index-CNKK6fD1.js",
+      "size": 330475
+    },
+    {
+      "url": "https://saiyam-jenny.invitationmedia.in/~flock.js",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "localPath": "/saiyam-jenny.invitationmedia.in/~flock.js",
+      "size": 21296
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400;1,500;1,600&family=Cinzel:wght@400;500;600&family=Noto+Color+Emoji&display=swap",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "localPath": "/fonts.googleapis.com/css2.css__q3a2ec007",
+      "size": 20723
+    },
+    {
+      "url": "https://saiyam-jenny.invitationmedia.in/intro-poster.jpg",
+      "method": "GET",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "localPath": "/saiyam-jenny.invitationmedia.in/intro-poster.jpg",
+      "size": 71966
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSo.woff2",
+      "method": "GET",
+      "status": 200,
+      "contentType": "font/woff2",
+      "localPath": "/fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSo.woff2",
+      "size": 39260
+    },
+    {
+      "url": "https://saiyam-jenny.invitationmedia.in/~api/analytics",
+      "method": "POST",
+      "status": 202,
+      "contentType": "text/plain; charset=UTF-8",
+      "localPath": "/_api_replay/POST-99d263b29d68.json",
+      "size": 8
+    },
+    {
+      "url": "https://saiyam-jenny.invitationmedia.in/favicon.ico",
+      "method": "GET",
+      "status": 200,
+      "contentType": "image/vnd.microsoft.icon",
+      "localPath": "/saiyam-jenny.invitationmedia.in/favicon.ico",
+      "size": 46599
+    }
+  ],
+  "apiReplay": {
+    "POST https://saiyam-jenny.invitationmedia.in/~api/analytics": "/_api_replay/POST-99d263b29d68.json"
+  },
+  "wsReplay": {}
+}

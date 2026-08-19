@@ -1,0 +1,274 @@
+{
+  "ok": true,
+  "url": "https://saiyam-jenny.invitationmedia.in/",
+  "title": "Wedding Invitation",
+  "installed": true,
+  "installedAt": 1787129683845,
+  "records": {
+    "intersectionObservers": [],
+    "intersectionEntries": [],
+    "webAnimations": [],
+    "scrollListeners": [
+      {
+        "at": 180.90000000000146,
+        "type": "scroll",
+        "target": "div#root",
+        "passive": null,
+        "capture": true
+      },
+      {
+        "at": 181,
+        "type": "touchmove",
+        "target": "div#root",
+        "passive": true,
+        "capture": false
+      },
+      {
+        "at": 181,
+        "type": "touchmove",
+        "target": "div#root",
+        "passive": true,
+        "capture": true
+      },
+      {
+        "at": 181,
+        "type": "wheel",
+        "target": "div#root",
+        "passive": true,
+        "capture": false
+      },
+      {
+        "at": 181,
+        "type": "wheel",
+        "target": "div#root",
+        "passive": true,
+        "capture": true
+      }
+    ],
+    "animationFrames": {
+      "count": 0,
+      "samples": []
+    },
+    "gsapCalls": [],
+    "scrollTriggerCalls": [],
+    "probes": []
+  },
+  "css": {
+    "keyframes": [
+      {
+        "name": "pulse",
+        "frameCount": 1,
+        "selectors": [
+          "50%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "enter",
+        "frameCount": 1,
+        "selectors": [
+          "0%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "exit",
+        "frameCount": 1,
+        "selectors": [
+          "100%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "float-petal",
+        "frameCount": 4,
+        "selectors": [
+          "0%",
+          "10%",
+          "90%",
+          "100%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "drift",
+        "frameCount": 2,
+        "selectors": [
+          "0%, 100%",
+          "50%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "shimmer",
+        "frameCount": 2,
+        "selectors": [
+          "0%, 100%",
+          "50%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "envelope-open",
+        "frameCount": 3,
+        "selectors": [
+          "0%",
+          "50%",
+          "100%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "fade-up",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "fade-in",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "accordion-up",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "accordion-down",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "https://saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css"
+      },
+      {
+        "name": "swipe-out-left",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "inline"
+      },
+      {
+        "name": "swipe-out-right",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "inline"
+      },
+      {
+        "name": "swipe-out-up",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "inline"
+      },
+      {
+        "name": "swipe-out-down",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "inline"
+      },
+      {
+        "name": "sonner-fade-in",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "inline"
+      },
+      {
+        "name": "sonner-fade-out",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "inline"
+      },
+      {
+        "name": "sonner-spin",
+        "frameCount": 2,
+        "selectors": [
+          "0%",
+          "100%"
+        ],
+        "source": "inline"
+      }
+    ],
+    "animationRules": [],
+    "transitionRules": [],
+    "scrollTimelineRules": [],
+    "computedAnimatedElements": [
+      {
+        "selector": "p.bg-white.text-sage-deep.font-serif-display",
+        "animationName": "pulse",
+        "animationDuration": "2s",
+        "transitionProperty": "",
+        "transitionDuration": ""
+      },
+      {
+        "selector": "div.absolute.inset-0.bg-white",
+        "animationName": "",
+        "animationDuration": "",
+        "transitionProperty": "opacity",
+        "transitionDuration": "0.7s"
+      }
+    ]
+  },
+  "libraries": {
+    "gsap": {
+      "detected": false
+    },
+    "scrollTrigger": {
+      "detected": false
+    },
+    "lenis": {
+      "detected": false
+    },
+    "framerMotion": {
+      "detected": false,
+      "elementCount": 0,
+      "samples": []
+    }
+  },
+  "counts": {
+    "intersectionObservers": 0,
+    "intersectionEntries": 0,
+    "webAnimations": 0,
+    "scrollListeners": 5,
+    "requestAnimationFrame": 0,
+    "gsapCalls": 0,
+    "scrollTriggerCalls": 0,
+    "cssKeyframes": 18,
+    "cssAnimationRules": 0,
+    "cssTransitionRules": 0
+  },
+  "probeResult": {
+    "hoverCount": 0,
+    "scrollSteps": 0,
+    "durationMs": 1
+  }
+}

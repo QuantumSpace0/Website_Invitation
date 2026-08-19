@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 2,
+  "comparedAt": "2026-08-19T08:56:10.840Z",
+  "sourceUrl": "https://saiyam-jenny.invitationmedia.in/",
+  "baseline": "fixed local mirror runtime",
+  "candidate": "generated runtime-preserve source wrapper",
+  "baselineRoot": "source/public/_mirror",
+  "mirrorUrl": "http://127.0.0.1:38119/_mirror/saiyam-jenny.invitationmedia.in/index.html",
+  "sourceAppUrl": "http://127.0.0.1:38119/",
+  "mirrorEntryPath": "/_mirror/saiyam-jenny.invitationmedia.in/index.html",
+  "mirrorBaselinePath": "/_mirror/saiyam-jenny.invitationmedia.in/index.html",
+  "baselineServedBy": "source public mirror",
+  "overallMismatchPct": 0,
+  "mismatchPct": 0,
+  "mismatchedPx": 0,
+  "totalPx": 1296000,
+  "viewports": [
+    {
+      "viewport": "desktop",
+      "state": "default",
+      "stateApplied": true,
+      "stateMeta": {
+        "applied": true,
+        "mirror": {
+          "applied": true,
+          "settled": true,
+          "source": "source iframe element baseline"
+        },
+        "source": {
+          "applied": true,
+          "settled": true
+        },
+        "reason": null
+      },
+      "width": 1440,
+      "height": 900,
+      "comparedAt": {
+        "width": 1440,
+        "height": 900
+      },
+      "mismatchedPx": 0,
+      "totalPx": 1296000,
+      "mismatchPct": 0,
+      "mirror": "mirror_desktop.png",
+      "source": "source_desktop.png",
+      "diff": "diff_desktop.png"
+    }
+  ],
+  "states": [
+    {
+      "name": "pointer-drag",
+      "appliedRate": 1,
+      "avgMismatchPct": 0,
+      "perViewport": [
+        {
+          "viewport": "desktop",
+          "mismatchPct": 0,
+          "stateApplied": true,
+          "mirror": "mirror_desktop_pointer-drag.png",
+          "source": "source_desktop_pointer-drag.png",
+          "diff": "diff_desktop_pointer-drag.png"
+        }
+      ]
+    }
+  ],
+  "rawResults": [
+    {
+      "viewport": "desktop",
+      "state": "default",
+      "stateApplied": true,
+      "stateMeta": {
+        "applied": true,
+        "mirror": {
+          "applied": true,
+          "settled": true,
+          "source": "source iframe element baseline"
+        },
+        "source": {
+          "applied": true,
+          "settled": true
+        },
+        "reason": null
+      },
+      "width": 1440,
+      "height": 900,
+      "comparedAt": {
+        "width": 1440,
+        "height": 900
+      },
+      "mismatchedPx": 0,
+      "totalPx": 1296000,
+      "mismatchPct": 0,
+      "mirror": "mirror_desktop.png",
+      "source": "source_desktop.png",
+      "diff": "diff_desktop.png"
+    },
+    {
+      "viewport": "desktop",
+      "state": "pointer-drag",
+      "stateApplied": true,
+      "stateMeta": {
+        "applied": true,
+        "mirror": {
+          "applied": true,
+          "settled": true,
+          "source": "source iframe element baseline"
+        },
+        "source": {
+          "applied": true,
+          "settled": true,
+          "start": {
+            "x": 648,
+            "y": 522
+          },
+          "end": {
+            "x": 979,
+            "y": 378
+          },
+          "waitedMs": 1500
+        },
+        "reason": null
+      },
+      "width": 1440,
+      "height": 900,
+      "comparedAt": {
+        "width": 1440,
+        "height": 900
+      },
+      "mismatchedPx": 0,
+      "totalPx": 1296000,
+      "mismatchPct": 0,
+      "mirror": "mirror_desktop_pointer-drag.png",
+      "source": "source_desktop_pointer-drag.png",
+      "diff": "diff_desktop_pointer-drag.png"
+    }
+  ],
+  "files": {
+    "mirror": "mirror_desktop.png",
+    "source": "source_desktop.png",
+    "diff": "diff_desktop.png"
+  },
+  "caveat": "This source-side check compares the generated source wrapper against the fixed local mirror runtime. It is used for runtime/WebGL targets where live-original headless screenshots can be flaky."
+}

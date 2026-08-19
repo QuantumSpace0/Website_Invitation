@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "sourceUrl": "https://saiyam-jenny.invitationmedia.in/",
+  "title": "Wedding Invitation",
+  "mirror": {
+    "originalUrl": "https://saiyam-jenny.invitationmedia.in/",
+    "finalUrl": "https://saiyam-jenny.invitationmedia.in/",
+    "targetHost": "saiyam-jenny.invitationmedia.in",
+    "mirroredHosts": [
+      "saiyam-jenny.invitationmedia.in",
+      "fonts.googleapis.com",
+      "fonts.gstatic.com"
+    ],
+    "capturedFiles": 9,
+    "capturedBytes": 615724
+  },
+  "runtime": {
+    "mode": "visual-spec",
+    "confidence": "low",
+    "engines": [],
+    "canvasCount": 0,
+    "webglContextCanvases": 0,
+    "rafFpsApprox": null,
+    "shaderMatches": 0,
+    "reasons": [
+      "browser exposes WebGL/WebGL2 capability",
+      "1 fixed/full-screen runtime layer(s)",
+      "runtime signals exist but are too weak for confident preservation"
+    ]
+  },
+  "observation": {
+    "cssRules": 898,
+    "keyframes": 18,
+    "scrollListeners": 5,
+    "requestAnimationFrame": 0
+  },
+  "paths": {
+    "mirror": "../mirror",
+    "mirrorEntry": "saiyam-jenny.invitationmedia.in/index.html",
+    "mirrorIframeSrc": "/_mirror/saiyam-jenny.invitationmedia.in/index.html",
+    "sourceDesign": "design.md",
+    "siteDir": ".."
+  }
+}

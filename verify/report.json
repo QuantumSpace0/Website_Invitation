@@ -1,0 +1,619 @@
+{
+  "schemaVersion": 3,
+  "url": "https://saiyam-jenny.invitationmedia.in/",
+  "previewUrl": null,
+  "mirrorPort": 40867,
+  "runAt": "2026-08-19T08:55:53.231Z",
+  "viewports": [
+    {
+      "viewport": "desktop",
+      "state": "default",
+      "stateApplied": true,
+      "stateMeta": {
+        "applied": true,
+        "orig": {
+          "applied": true,
+          "settled": true
+        },
+        "mirror": {
+          "applied": true,
+          "settled": true
+        },
+        "selectorUsed": null,
+        "source": null,
+        "waitedMs": null,
+        "reason": null
+      },
+      "width": 1440,
+      "height": 900,
+      "comparedAt": {
+        "width": 1440,
+        "height": 900
+      },
+      "mismatchedPx": 125584,
+      "totalPx": 1296000,
+      "mismatchPct": 9.690123456790122,
+      "original": "original_desktop.png",
+      "mirror": "mirror_desktop.png",
+      "diff": "diff_desktop.png",
+      "dom": {
+        "origNodeCount": 13,
+        "mirNodeCount": 10,
+        "nodeCountDelta": -3,
+        "positionMatches": 5,
+        "structuralMatchPct": 38.46153846153847,
+        "capped": false,
+        "missingFromMirror": [
+          {
+            "sig": "div@||0||f",
+            "missingCount": 2
+          },
+          {
+            "sig": "div@||2||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "audio@||0||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "div@||4||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "video@||0||f",
+            "missingCount": 1
+          }
+        ],
+        "extraInMirror": [
+          {
+            "sig": "div@||3||f",
+            "extraCount": 1
+          },
+          {
+            "sig": "h1@||0||t",
+            "extraCount": 1
+          },
+          {
+            "sig": "a@||0||t",
+            "extraCount": 1
+          }
+        ],
+        "firstDivergence": {
+          "index": 5,
+          "pathInTree": "body>div[0]>div[2]",
+          "origSig": "div@||2||f",
+          "mirSig": "div@||1||f"
+        }
+      },
+      "sectionDiff": {
+        "sections": [
+          {
+            "sectionId": "viewport-0",
+            "sectionName": "viewport 1",
+            "scrollY": 0,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900,
+              "top": 0,
+              "bottom": 900,
+              "left": 0,
+              "right": 1440
+            },
+            "comparedAt": {
+              "width": 1440,
+              "height": 900
+            },
+            "mismatchedPx": 125266,
+            "totalPx": 1296000,
+            "mismatchPct": 9.665586419753087,
+            "original": "section_original_desktop_01_viewport-0.png",
+            "mirror": "section_mirror_desktop_01_viewport-0.png",
+            "diff": "section_diff_desktop_01_viewport-0.png",
+            "quadrants": {
+              "topLeft": 2.606172839506173,
+              "topRight": 6.311111111111112,
+              "bottomLeft": 11.743518518518519,
+              "bottomRight": 18.001543209876544
+            }
+          }
+        ],
+        "overallMismatchPct": 9.665586419753087
+      }
+    },
+    {
+      "viewport": "tablet",
+      "state": "default",
+      "stateApplied": true,
+      "stateMeta": {
+        "applied": true,
+        "orig": {
+          "applied": true,
+          "settled": true
+        },
+        "mirror": {
+          "applied": true,
+          "settled": true
+        },
+        "selectorUsed": null,
+        "source": null,
+        "waitedMs": null,
+        "reason": null
+      },
+      "width": 768,
+      "height": 1024,
+      "comparedAt": {
+        "width": 768,
+        "height": 1024
+      },
+      "mismatchedPx": 52744,
+      "totalPx": 786432,
+      "mismatchPct": 6.706746419270833,
+      "original": "original_tablet.png",
+      "mirror": "mirror_tablet.png",
+      "diff": "diff_tablet.png",
+      "dom": {
+        "origNodeCount": 13,
+        "mirNodeCount": 10,
+        "nodeCountDelta": -3,
+        "positionMatches": 5,
+        "structuralMatchPct": 38.46153846153847,
+        "capped": false,
+        "missingFromMirror": [
+          {
+            "sig": "div@||0||f",
+            "missingCount": 2
+          },
+          {
+            "sig": "div@||2||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "audio@||0||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "div@||4||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "video@||0||f",
+            "missingCount": 1
+          }
+        ],
+        "extraInMirror": [
+          {
+            "sig": "div@||3||f",
+            "extraCount": 1
+          },
+          {
+            "sig": "h1@||0||t",
+            "extraCount": 1
+          },
+          {
+            "sig": "a@||0||t",
+            "extraCount": 1
+          }
+        ],
+        "firstDivergence": {
+          "index": 5,
+          "pathInTree": "body>div[0]>div[2]",
+          "origSig": "div@||2||f",
+          "mirSig": "div@||1||f"
+        }
+      },
+      "sectionDiff": null
+    },
+    {
+      "viewport": "mobile",
+      "state": "default",
+      "stateApplied": true,
+      "stateMeta": {
+        "applied": true,
+        "orig": {
+          "applied": true,
+          "settled": true
+        },
+        "mirror": {
+          "applied": true,
+          "settled": true
+        },
+        "selectorUsed": null,
+        "source": null,
+        "waitedMs": null,
+        "reason": null
+      },
+      "width": 390,
+      "height": 844,
+      "comparedAt": {
+        "width": 390,
+        "height": 844
+      },
+      "mismatchedPx": 20409,
+      "totalPx": 329160,
+      "mismatchPct": 6.200328107911046,
+      "original": "original_mobile.png",
+      "mirror": "mirror_mobile.png",
+      "diff": "diff_mobile.png",
+      "dom": {
+        "origNodeCount": 13,
+        "mirNodeCount": 10,
+        "nodeCountDelta": -3,
+        "positionMatches": 5,
+        "structuralMatchPct": 38.46153846153847,
+        "capped": false,
+        "missingFromMirror": [
+          {
+            "sig": "div@||0||f",
+            "missingCount": 2
+          },
+          {
+            "sig": "div@||2||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "audio@||0||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "div@||4||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "video@||0||f",
+            "missingCount": 1
+          }
+        ],
+        "extraInMirror": [
+          {
+            "sig": "div@||3||f",
+            "extraCount": 1
+          },
+          {
+            "sig": "h1@||0||t",
+            "extraCount": 1
+          },
+          {
+            "sig": "a@||0||t",
+            "extraCount": 1
+          }
+        ],
+        "firstDivergence": {
+          "index": 5,
+          "pathInTree": "body>div[0]>div[2]",
+          "origSig": "div@||2||f",
+          "mirSig": "div@||1||f"
+        }
+      },
+      "sectionDiff": null
+    }
+  ],
+  "states": [],
+  "rawResults": [
+    {
+      "viewport": "desktop",
+      "state": "default",
+      "stateApplied": true,
+      "stateMeta": {
+        "applied": true,
+        "orig": {
+          "applied": true,
+          "settled": true
+        },
+        "mirror": {
+          "applied": true,
+          "settled": true
+        },
+        "selectorUsed": null,
+        "source": null,
+        "waitedMs": null,
+        "reason": null
+      },
+      "width": 1440,
+      "height": 900,
+      "comparedAt": {
+        "width": 1440,
+        "height": 900
+      },
+      "mismatchedPx": 125584,
+      "totalPx": 1296000,
+      "mismatchPct": 9.690123456790122,
+      "original": "original_desktop.png",
+      "mirror": "mirror_desktop.png",
+      "diff": "diff_desktop.png",
+      "dom": {
+        "origNodeCount": 13,
+        "mirNodeCount": 10,
+        "nodeCountDelta": -3,
+        "positionMatches": 5,
+        "structuralMatchPct": 38.46153846153847,
+        "capped": false,
+        "missingFromMirror": [
+          {
+            "sig": "div@||0||f",
+            "missingCount": 2
+          },
+          {
+            "sig": "div@||2||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "audio@||0||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "div@||4||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "video@||0||f",
+            "missingCount": 1
+          }
+        ],
+        "extraInMirror": [
+          {
+            "sig": "div@||3||f",
+            "extraCount": 1
+          },
+          {
+            "sig": "h1@||0||t",
+            "extraCount": 1
+          },
+          {
+            "sig": "a@||0||t",
+            "extraCount": 1
+          }
+        ],
+        "firstDivergence": {
+          "index": 5,
+          "pathInTree": "body>div[0]>div[2]",
+          "origSig": "div@||2||f",
+          "mirSig": "div@||1||f"
+        }
+      },
+      "sectionDiff": {
+        "sections": [
+          {
+            "sectionId": "viewport-0",
+            "sectionName": "viewport 1",
+            "scrollY": 0,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900,
+              "top": 0,
+              "bottom": 900,
+              "left": 0,
+              "right": 1440
+            },
+            "comparedAt": {
+              "width": 1440,
+              "height": 900
+            },
+            "mismatchedPx": 125266,
+            "totalPx": 1296000,
+            "mismatchPct": 9.665586419753087,
+            "original": "section_original_desktop_01_viewport-0.png",
+            "mirror": "section_mirror_desktop_01_viewport-0.png",
+            "diff": "section_diff_desktop_01_viewport-0.png",
+            "quadrants": {
+              "topLeft": 2.606172839506173,
+              "topRight": 6.311111111111112,
+              "bottomLeft": 11.743518518518519,
+              "bottomRight": 18.001543209876544
+            }
+          }
+        ],
+        "overallMismatchPct": 9.665586419753087
+      }
+    },
+    {
+      "viewport": "tablet",
+      "state": "default",
+      "stateApplied": true,
+      "stateMeta": {
+        "applied": true,
+        "orig": {
+          "applied": true,
+          "settled": true
+        },
+        "mirror": {
+          "applied": true,
+          "settled": true
+        },
+        "selectorUsed": null,
+        "source": null,
+        "waitedMs": null,
+        "reason": null
+      },
+      "width": 768,
+      "height": 1024,
+      "comparedAt": {
+        "width": 768,
+        "height": 1024
+      },
+      "mismatchedPx": 52744,
+      "totalPx": 786432,
+      "mismatchPct": 6.706746419270833,
+      "original": "original_tablet.png",
+      "mirror": "mirror_tablet.png",
+      "diff": "diff_tablet.png",
+      "dom": {
+        "origNodeCount": 13,
+        "mirNodeCount": 10,
+        "nodeCountDelta": -3,
+        "positionMatches": 5,
+        "structuralMatchPct": 38.46153846153847,
+        "capped": false,
+        "missingFromMirror": [
+          {
+            "sig": "div@||0||f",
+            "missingCount": 2
+          },
+          {
+            "sig": "div@||2||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "audio@||0||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "div@||4||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "video@||0||f",
+            "missingCount": 1
+          }
+        ],
+        "extraInMirror": [
+          {
+            "sig": "div@||3||f",
+            "extraCount": 1
+          },
+          {
+            "sig": "h1@||0||t",
+            "extraCount": 1
+          },
+          {
+            "sig": "a@||0||t",
+            "extraCount": 1
+          }
+        ],
+        "firstDivergence": {
+          "index": 5,
+          "pathInTree": "body>div[0]>div[2]",
+          "origSig": "div@||2||f",
+          "mirSig": "div@||1||f"
+        }
+      },
+      "sectionDiff": null
+    },
+    {
+      "viewport": "mobile",
+      "state": "default",
+      "stateApplied": true,
+      "stateMeta": {
+        "applied": true,
+        "orig": {
+          "applied": true,
+          "settled": true
+        },
+        "mirror": {
+          "applied": true,
+          "settled": true
+        },
+        "selectorUsed": null,
+        "source": null,
+        "waitedMs": null,
+        "reason": null
+      },
+      "width": 390,
+      "height": 844,
+      "comparedAt": {
+        "width": 390,
+        "height": 844
+      },
+      "mismatchedPx": 20409,
+      "totalPx": 329160,
+      "mismatchPct": 6.200328107911046,
+      "original": "original_mobile.png",
+      "mirror": "mirror_mobile.png",
+      "diff": "diff_mobile.png",
+      "dom": {
+        "origNodeCount": 13,
+        "mirNodeCount": 10,
+        "nodeCountDelta": -3,
+        "positionMatches": 5,
+        "structuralMatchPct": 38.46153846153847,
+        "capped": false,
+        "missingFromMirror": [
+          {
+            "sig": "div@||0||f",
+            "missingCount": 2
+          },
+          {
+            "sig": "div@||2||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "audio@||0||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "div@||4||f",
+            "missingCount": 1
+          },
+          {
+            "sig": "video@||0||f",
+            "missingCount": 1
+          }
+        ],
+        "extraInMirror": [
+          {
+            "sig": "div@||3||f",
+            "extraCount": 1
+          },
+          {
+            "sig": "h1@||0||t",
+            "extraCount": 1
+          },
+          {
+            "sig": "a@||0||t",
+            "extraCount": 1
+          }
+        ],
+        "firstDivergence": {
+          "index": 5,
+          "pathInTree": "body>div[0]>div[2]",
+          "origSig": "div@||2||f",
+          "mirSig": "div@||1||f"
+        }
+      },
+      "sectionDiff": null
+    }
+  ],
+  "sectionDiffs": {
+    "sections": [
+      {
+        "sectionId": "viewport-0",
+        "sectionName": "viewport 1",
+        "scrollY": 0,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "top": 0,
+          "bottom": 900,
+          "left": 0,
+          "right": 1440
+        },
+        "comparedAt": {
+          "width": 1440,
+          "height": 900
+        },
+        "mismatchedPx": 125266,
+        "totalPx": 1296000,
+        "mismatchPct": 9.665586419753087,
+        "original": "section_original_desktop_01_viewport-0.png",
+        "mirror": "section_mirror_desktop_01_viewport-0.png",
+        "diff": "section_diff_desktop_01_viewport-0.png",
+        "quadrants": {
+          "topLeft": 2.606172839506173,
+          "topRight": 6.311111111111112,
+          "bottomLeft": 11.743518518518519,
+          "bottomRight": 18.001543209876544
+        }
+      }
+    ],
+    "overallMismatchPct": 9.665586419753087
+  },
+  "overallMismatchPct": 7.532399327990667,
+  "overallStructuralMatchPct": 38.46153846153847,
+  "metricCaveat": "Two metrics are reported per viewport: (1) pixel mismatch — fraction of pixels that differ in the above-the-fold screenshot, and (2) structural match — fraction of DOM nodes whose tag/role/framer-name/child-count fingerprint lines up position-for-position. Pixel-diff is sensitive to lazy-loading timing: on sites with IntersectionObserver-driven image loads, the mirror often renders MORE content than the original (assets are local, no network latency) and the mismatch reflects that gap, not infidelity. The structural metric is timing-insensitive — if structural match is high but pixel mismatch is also high, the divergence is almost certainly load-timing rather than a real fidelity gap. Read the two together."
+}

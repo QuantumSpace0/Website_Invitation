@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "url": "https://saiyam-jenny.invitationmedia.in/",
+  "renderedUrl": "https://saiyam-jenny.invitationmedia.in/",
+  "domain": "saiyam-jenny.invitationmedia.in",
+  "title": "Wedding Invitation",
+  "extractedAt": "2026-08-19T08:56:14.618Z",
+  "meta": {
+    "description": null,
+    "ogImage": "https://storage.googleapis.com/gpt-engineer-file-uploads/vIqaRTSLkYaT047ILJV8fuelrRc2/social-images/social-1782198798799-Media.webp"
+  },
+  "colors": {
+    "semantic": {
+      "primary": "#3d0f17",
+      "secondary": "#931f33",
+      "accent": "#000000",
+      "surface": "#faf7f5",
+      "onSurface": "#3d0f17"
+    },
+    "palette": [
+      {
+        "rank": 1,
+        "hex": "#ecc6cc",
+        "count": 8,
+        "role": "borderColor"
+      },
+      {
+        "rank": 2,
+        "hex": "#3d0f17",
+        "count": 7,
+        "role": "color"
+      },
+      {
+        "rank": 3,
+        "hex": "#000000",
+        "count": 1,
+        "role": "backgroundColor"
+      },
+      {
+        "rank": 4,
+        "hex": "#931f33",
+        "count": 1,
+        "role": "color"
+      },
+      {
+        "rank": 5,
+        "hex": "#ffffff",
+        "count": 1,
+        "role": "backgroundColor"
+      }
+    ],
+    "cssVariables": {
+      "--border": "350 50% 85%",
+      "--gradient-gold": "linear-gradient(135deg, hsl(30 60% 55%), hsl(30 55% 40%))",
+      "--tw-ring-offset-shadow": "0 0 #0000",
+      "--gold": "30 60% 48%",
+      "--tw-backdrop-sepia": "",
+      "--tw-ring-shadow": "0 0 #0000",
+      "--sage": "350 50% 90%",
+      "--card": "0 0% 100%",
+      "--gold-soft": "30 50% 82%",
+      "--tw-sepia": "",
+      "--accent": "350 60% 55%",
+      "--tw-ordinal": "",
+      "--rose": "350 70% 42%",
+      "--rose-deep": "350 70% 28%",
+      "--tw-backdrop-saturate": "",
+      "--tw-contain-style": "",
+      "--gradient-sage": "linear-gradient(135deg, hsl(350 50% 94%), hsl(350 45% 88%))",
+      "--primary-foreground": "0 0% 100%",
+      "--cream": "30 30% 97%",
+      "--tw-ring-inset": "",
+      "--card-foreground": "350 60% 15%",
+      "--tw-backdrop-invert": "",
+      "--tw-numeric-spacing": "",
+      "--secondary-foreground": "350 55% 22%",
+      "--tw-border-spacing-x": "0",
+      "--muted": "350 30% 92%",
+      "--background": "30 30% 97%",
+      "--tw-brightness": "",
+      "--tw-backdrop-grayscale": "",
+      "--tw-hue-rotate": "",
+      "--tw-scale-y": "1",
+      "--accent-foreground": "0 0% 100%",
+      "--tw-pan-y": "",
+      "--shadow-gold": "0 10px 40px -10px hsl(30 55% 45% / .3)",
+      "--tw-backdrop-contrast": "",
+      "--tw-drop-shadow": "",
+      "--tw-ring-color": "rgb(59 130 246 / .5)",
+      "--tw-backdrop-brightness": "",
+      "--tw-pan-x": "",
+      "--tw-translate-y": "0",
+      "--sage-soft": "350 60% 96%",
+      "--popover": "0 0% 100%",
+      "--ring": "350 75% 32%",
+      "--tw-rotate": "0",
+      "--shadow-elegant": "0 20px 60px -20px hsl(350 55% 30% / .25)",
+      "--tw-ring-offset-color": "#fff",
+      "--tw-contain-size": "",
+      "--tw-contrast": "",
+      "--transition-elegant": "cubic-bezier(.22, 1, .36, 1)",
+      "--shadow-soft": "0 8px 30px -10px hsl(350 40% 25% / .14)",
+      "--muted-foreground": "350 20% 38%",
+      "--tw-skew-x": "0",
+      "--radius": ".75rem",
+      "--popover-foreground": "350 60% 15%",
+      "--tw-backdrop-blur": "",
+      "--gradient-cream": "linear-gradient(180deg, hsl(30 30% 98%), hsl(350 40% 96%))",
+      "--tw-shadow": "0 0 #0000",
+      "--tw-translate-x": "0",
+      "--sage-deep": "350 65% 35%",
+      "--tw-ring-offset-width": "0px",
+      "--tw-gradient-via-position": "",
+      "--input": "350 50% 85%",
+      "--tw-saturate": "",
+      "--ink": "350 60% 15%",
+      "--tw-scroll-snap-strictness": "proximity",
+      "--tw-grayscale": "",
+      "--destructive": "0 70% 50%",
+      "--gradient-rose": "linear-gradient(135deg, hsl(350 70% 48%), hsl(350 70% 32%))",
+      "--tw-scale-x": "1",
+      "--tw-backdrop-hue-rotate": "",
+      "--tw-shadow-colored": "0 0 #0000",
+      "--tw-gradient-to-position": "",
+      "--tw-border-spacing-y": "0",
+      "--tw-numeric-fraction": "",
+      "--destructive-foreground": "0 0% 100%",
+      "--tw-skew-y": "0",
+      "--tw-slashed-zero": "",
+      "--primary": "350 75% 32%",
+      "--tw-blur": "",
+      "--tw-invert": "",
+      "--foreground": "350 60% 15%",
+      "--tw-backdrop-opacity": "",
+      "--tw-gradient-from-position": "",
+      "--secondary": "350 40% 94%",
+      "--tw-numeric-figure": "",
+      "--tw-pinch-zoom": "",
+      "--tw-contain-paint": "",
+      "--tw-contain-layout": "",
+      "--google-font-color-notocoloremoji": "colrv1"
+    }
+  },
+  "typography": {
+    "families": [
+      {
+        "family": "\"Cormorant Garamond\", serif",
+        "count": 8
+      }
+    ],
+    "styles": [
+      {
+        "context": "body",
+        "family": "\"Cormorant Garamond\", serif",
+        "size": "16px",
+        "weight": "400",
+        "lineHeight": "24px",
+        "letterSpacing": "normal",
+        "count": 7
+      },
+      {
+        "context": "body",
+        "family": "\"Cormorant Garamond\", serif",
+        "size": "18px",
+        "weight": "400",
+        "lineHeight": "28px",
+        "letterSpacing": "0.9px",
+        "count": 1
+      }
+    ]
+  },
+  "spacing": {
+    "scaleType": "8px-based",
+    "commonValues": [
+      {
+        "px": 16,
+        "rem": "1rem",
+        "count": 4
+      },
+      {
+        "px": 8,
+        "rem": "0.5rem",
+        "count": 2
+      },
+      {
+        "px": 20,
+        "rem": "1.25rem",
+        "count": 2
+      }
+    ]
+  },
+  "borderRadius": {
+    "values": []
+  },
+  "shadows": [
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+      "count": 1
+    }
+  ],
+  "components": {
+    "buttons": [],
+    "links": [],
+    "inputs": [],
+    "interactiveSamples": []
+  },
+  "breakpoints": [
+    600,
+    640,
+    768,
+    1400
+  ],
+  "extractionSource": "live"
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "url": "https://saiyam-jenny.invitationmedia.in/",
+  "styles": {
+    "stylesheets": 2,
+    "rules": 898,
+    "keyframes": 18,
+    "mediaQueries": 6,
+    "containerQueries": 0,
+    "cssVariables": 376,
+    "variableReferences": 750,
+    "cssInJsBlocks": 1
+  },
+  "animations": {
+    "keyframes": 18,
+    "animationRules": 0,
+    "transitionRules": 0,
+    "scrollListeners": 5,
+    "intersectionObservers": 0,
+    "webAnimations": 0,
+    "requestAnimationFrame": 0
+  },
+  "runtime": {
+    "mode": "visual-spec",
+    "confidence": "low",
+    "score": {
+      "runtime": 26,
+      "source": 12,
+      "static": 0
+    },
+    "reasons": [
+      "browser exposes WebGL/WebGL2 capability",
+      "1 fixed/full-screen runtime layer(s)",
+      "runtime signals exist but are too weak for confident preservation"
+    ],
+    "summary": {
+      "canvasCount": 0,
+      "videoCount": 1,
+      "webglAvailable": true,
+      "webglContextCanvases": 0,
+      "engines": [],
+      "rafAppFired": 0,
+      "rafFpsApprox": 0,
+      "shaderMatches": 0,
+      "fullscreenRuntimeLayers": 1,
+      "videoCanvasOverlays": 0
+    }
+  },
+  "files": {
+    "stylesJson": "styles.json",
+    "stylesMd": "styles.md",
+    "animationsJson": "animations.json",
+    "animationsMd": "animations.md",
+    "runtimeJson": "runtime_classification.json",
+    "runtimeMd": "runtime_classification.md"
+  }
+}

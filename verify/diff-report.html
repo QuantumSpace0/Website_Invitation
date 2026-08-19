@@ -1,0 +1,81 @@
+<!doctype html><meta charset="utf-8"><title>diff report — https://saiyam-jenny.invitationmedia.in/</title>
+<style>
+  body { font: 14px/1.4 -apple-system, system-ui, sans-serif; background: #111; color: #eee; padding: 24px; }
+  h1 { font-size: 18px; }
+  h2 { font-size: 15px; border-bottom: 1px solid #333; padding-bottom: 6px; margin-top: 28px; }
+  h3 { font-size: 13px; color: #ccc; margin: 12px 0 6px; }
+  .meta { color: #888; font-weight: normal; font-size: 12px; }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 8px 0 12px; }
+  figure { margin: 0; background: #1a1a1a; padding: 8px; border-radius: 4px; }
+  figcaption { font-size: 11px; color: #888; margin-bottom: 4px; }
+  img { width: 100%; height: auto; display: block; }
+  .summary { background: #1a1a1a; padding: 12px; border-radius: 4px; margin-bottom: 16px; }
+  .tables { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 8px 0 8px; }
+  table { width: 100%; border-collapse: collapse; background: #1a1a1a; font-size: 11px; }
+  caption { text-align: left; color: #888; padding: 4px 8px; font-size: 11px; }
+  th, td { text-align: left; padding: 4px 8px; border-top: 1px solid #2a2a2a; vertical-align: top; }
+  th { color: #888; font-weight: normal; }
+  td:first-child { width: 48px; color: #ccc; }
+  code { color: #b8d4ff; font-size: 11px; word-break: break-all; }
+  .firstdiv { background: #1a1a1a; padding: 8px; border-radius: 4px; font-size: 11px; color: #aaa; margin-bottom: 24px; }
+  .state-block { border-left: 2px solid #2a4a8a; padding-left: 12px; margin-top: 28px; }
+</style>
+<h1>diff report — https://saiyam-jenny.invitationmedia.in/</h1>
+<div class="summary">
+  <div>overall pixel mismatch (default state): <b>7.53%</b></div>
+  <div>overall structural match (default state): <b>38.46%</b></div>
+  <div>states measured: <b>0</b></div>
+  <div>run at 2026-08-19T08:55:53.231Z</div>
+  <div style="margin-top:6px;font-size:11px;color:#888">Two metrics are reported per viewport: (1) pixel mismatch — fraction of pixels that differ in the above-the-fold screenshot, and (2) structural match — fraction of DOM nodes whose tag/role/framer-name/child-count fingerprint lines up position-for-position. Pixel-diff is sensitive to lazy-loading timing: on sites with IntersectionObserver-driven image loads, the mirror often renders MORE content than the original (assets are local, no network latency) and the mismatch reflects that gap, not infidelity. The structural metric is timing-insensitive — if structural match is high but pixel mismatch is also high, the divergence is almost certainly load-timing rather than a real fidelity gap. Read the two together.</div>
+</div>
+<h2>default state</h2>
+
+    <section>
+      <h2>desktop <span class="meta">1440×900 — 9.69% pixel diff (125,584 px) · 38.46% structural match · nodes orig=13 mir=10 (Δ -3)</span></h2>
+      <div class="row">
+        <figure><figcaption>original</figcaption><img src="original_desktop.png"></figure>
+        <figure><figcaption>mirror</figcaption><img src="mirror_desktop.png"></figure>
+        <figure><figcaption>diff</figcaption><img src="diff_desktop.png"></figure>
+      </div>
+      <div class="tables">
+           <table><caption>missing from mirror</caption><thead><tr><th>cnt</th><th>signature</th></tr></thead><tbody><tr><td>−2</td><td><code>div@||0||f</code></td></tr><tr><td>−1</td><td><code>div@||2||f</code></td></tr><tr><td>−1</td><td><code>audio@||0||f</code></td></tr><tr><td>−1</td><td><code>div@||4||f</code></td></tr><tr><td>−1</td><td><code>video@||0||f</code></td></tr></tbody></table>
+           <table><caption>extra in mirror</caption><thead><tr><th>cnt</th><th>signature</th></tr></thead><tbody><tr><td>+1</td><td><code>div@||3||f</code></td></tr><tr><td>+1</td><td><code>h1@||0||t</code></td></tr><tr><td>+1</td><td><code>a@||0||t</code></td></tr></tbody></table>
+         </div>
+      <div class="firstdiv">first divergence at <code>body&gt;div[0]&gt;div[2]</code><br>
+           orig: <code>div@||2||f</code><br>
+           mir: <code>div@||1||f</code></div>
+    </section>
+  
+    <section>
+      <h2>tablet <span class="meta">768×1024 — 6.71% pixel diff (52,744 px) · 38.46% structural match · nodes orig=13 mir=10 (Δ -3)</span></h2>
+      <div class="row">
+        <figure><figcaption>original</figcaption><img src="original_tablet.png"></figure>
+        <figure><figcaption>mirror</figcaption><img src="mirror_tablet.png"></figure>
+        <figure><figcaption>diff</figcaption><img src="diff_tablet.png"></figure>
+      </div>
+      <div class="tables">
+           <table><caption>missing from mirror</caption><thead><tr><th>cnt</th><th>signature</th></tr></thead><tbody><tr><td>−2</td><td><code>div@||0||f</code></td></tr><tr><td>−1</td><td><code>div@||2||f</code></td></tr><tr><td>−1</td><td><code>audio@||0||f</code></td></tr><tr><td>−1</td><td><code>div@||4||f</code></td></tr><tr><td>−1</td><td><code>video@||0||f</code></td></tr></tbody></table>
+           <table><caption>extra in mirror</caption><thead><tr><th>cnt</th><th>signature</th></tr></thead><tbody><tr><td>+1</td><td><code>div@||3||f</code></td></tr><tr><td>+1</td><td><code>h1@||0||t</code></td></tr><tr><td>+1</td><td><code>a@||0||t</code></td></tr></tbody></table>
+         </div>
+      <div class="firstdiv">first divergence at <code>body&gt;div[0]&gt;div[2]</code><br>
+           orig: <code>div@||2||f</code><br>
+           mir: <code>div@||1||f</code></div>
+    </section>
+  
+    <section>
+      <h2>mobile <span class="meta">390×844 — 6.20% pixel diff (20,409 px) · 38.46% structural match · nodes orig=13 mir=10 (Δ -3)</span></h2>
+      <div class="row">
+        <figure><figcaption>original</figcaption><img src="original_mobile.png"></figure>
+        <figure><figcaption>mirror</figcaption><img src="mirror_mobile.png"></figure>
+        <figure><figcaption>diff</figcaption><img src="diff_mobile.png"></figure>
+      </div>
+      <div class="tables">
+           <table><caption>missing from mirror</caption><thead><tr><th>cnt</th><th>signature</th></tr></thead><tbody><tr><td>−2</td><td><code>div@||0||f</code></td></tr><tr><td>−1</td><td><code>div@||2||f</code></td></tr><tr><td>−1</td><td><code>audio@||0||f</code></td></tr><tr><td>−1</td><td><code>div@||4||f</code></td></tr><tr><td>−1</td><td><code>video@||0||f</code></td></tr></tbody></table>
+           <table><caption>extra in mirror</caption><thead><tr><th>cnt</th><th>signature</th></tr></thead><tbody><tr><td>+1</td><td><code>div@||3||f</code></td></tr><tr><td>+1</td><td><code>h1@||0||t</code></td></tr><tr><td>+1</td><td><code>a@||0||t</code></td></tr></tbody></table>
+         </div>
+      <div class="firstdiv">first divergence at <code>body&gt;div[0]&gt;div[2]</code><br>
+           orig: <code>div@||2||f</code><br>
+           mir: <code>div@||1||f</code></div>
+    </section>
+  
+

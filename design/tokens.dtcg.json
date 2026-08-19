@@ -1,0 +1,224 @@
+{
+  "$extensions": {
+    "com.cloner": {
+      "sourceUrl": "https://saiyam-jenny.invitationmedia.in/",
+      "extractedAt": "2026-08-19T08:56:14.618Z",
+      "generator": "cloner design_system stage"
+    }
+  },
+  "color": {
+    "semantic": {
+      "primary": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.239,
+            0.059,
+            0.09
+          ],
+          "hex": "#3d0f17"
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.576,
+            0.122,
+            0.2
+          ],
+          "hex": "#931f33"
+        }
+      },
+      "accent": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0,
+            0,
+            0
+          ],
+          "hex": "#000000"
+        }
+      },
+      "surface": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.98,
+            0.969,
+            0.961
+          ],
+          "hex": "#faf7f5"
+        }
+      },
+      "onsurface": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.239,
+            0.059,
+            0.09
+          ],
+          "hex": "#3d0f17"
+        }
+      }
+    },
+    "palette": {
+      "palette-1": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.925,
+            0.776,
+            0.8
+          ],
+          "hex": "#ecc6cc"
+        },
+        "$description": "8 occurrence(s), borderColor role"
+      },
+      "palette-2": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.239,
+            0.059,
+            0.09
+          ],
+          "hex": "#3d0f17"
+        },
+        "$description": "7 occurrence(s), color role"
+      },
+      "palette-3": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0,
+            0,
+            0
+          ],
+          "hex": "#000000"
+        },
+        "$description": "1 occurrence(s), backgroundColor role"
+      },
+      "palette-4": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.576,
+            0.122,
+            0.2
+          ],
+          "hex": "#931f33"
+        },
+        "$description": "1 occurrence(s), color role"
+      },
+      "palette-5": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ],
+          "hex": "#ffffff"
+        },
+        "$description": "1 occurrence(s), backgroundColor role"
+      }
+    }
+  },
+  "typography": {
+    "font-family": {
+      "cormorant-garamond-serif": {
+        "$type": "fontFamily",
+        "$value": "\"Cormorant Garamond\", serif",
+        "$description": "8 occurrence(s)"
+      }
+    },
+    "style": {
+      "text-1": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "\"Cormorant Garamond\", serif",
+          "fontSize": {
+            "value": 16,
+            "unit": "px"
+          },
+          "fontWeight": "400",
+          "lineHeight": {
+            "value": 24,
+            "unit": "px"
+          },
+          "letterSpacing": {
+            "value": 0,
+            "unit": "px"
+          }
+        },
+        "$description": "body · 7 occurrence(s)"
+      },
+      "text-2": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "\"Cormorant Garamond\", serif",
+          "fontSize": {
+            "value": 18,
+            "unit": "px"
+          },
+          "fontWeight": "400",
+          "lineHeight": {
+            "value": 28,
+            "unit": "px"
+          },
+          "letterSpacing": {
+            "value": 0.9,
+            "unit": "px"
+          }
+        },
+        "$description": "body · 1 occurrence(s)"
+      }
+    }
+  },
+  "spacing": {
+    "spacing-1": {
+      "$type": "dimension",
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      },
+      "$description": "4 occurrence(s)"
+    },
+    "spacing-2": {
+      "$type": "dimension",
+      "$value": {
+        "value": 8,
+        "unit": "px"
+      },
+      "$description": "2 occurrence(s)"
+    },
+    "spacing-3": {
+      "$type": "dimension",
+      "$value": {
+        "value": 20,
+        "unit": "px"
+      },
+      "$description": "2 occurrence(s)"
+    }
+  },
+  "shadow": {
+    "shadow-1": {
+      "$type": "shadow",
+      "$value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+      "$description": "1 occurrence(s)"
+    }
+  }
+}

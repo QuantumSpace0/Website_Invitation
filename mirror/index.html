@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<script id="__mirror_shim__">window.__MIRROR__ = {"originalOrigin":"https://saiyam-jenny.invitationmedia.in","mirroredHosts":["saiyam-jenny.invitationmedia.in","fonts.googleapis.com","fonts.gstatic.com"],"apiReplay":{"POST https://saiyam-jenny.invitationmedia.in/~api/analytics":"/_api_replay/POST-99d263b29d68.json"},"wsReplay":{},"strictOrigin":false,"verbose":false};(function shimRuntime() {
+  const M = window.__MIRROR__ || {};
+  const log = (...a) => { if (M.verbose) try { console.debug('[mirror-shim]', ...a); } catch {} };
+
+  // ── 1. ServiceWorker — disable. SWs intercept fetches and would bypass the mirror.
+  try {
+    if ('serviceWorker' in navigator) {
+      const noop = () => Promise.resolve({
+        active: null, installing: null, waiting: null,
+        update: () => Promise.resolve(),
+        unregister: () => Promise.resolve(true),
+        addEventListener: () => {},
+        removeEventListener: () => {},
+      });
+      Object.defineProperty(navigator, 'serviceWorker', {
+        configurable: true,
+        value: new Proxy({}, {
+          get(_t, p) {
+            if (p === 'register') return noop;
+            if (p === 'getRegistration' || p === 'getRegistrations') return () => Promise.resolve(p === 'getRegistrations' ? [] : null);
+            if (p === 'ready') return new Promise(() => {}); // never resolves
+            if (p === 'addEventListener' || p === 'removeEventListener') return () => {};
+            return undefined;
+          },
+        }),
+      });
+      log('serviceWorker disabled');
+    }
+  } catch (e) { log('SW patch failed', e); }
+
+  // ── 2. Origin shim. Optional. When true, scripts reading location.origin see
+  //       the original site's origin (helps same-origin-check guards). Off by
+  //       default because it can break absolute-URL routing.
+  if (M.strictOrigin && M.originalOrigin) {
+    try {
+      const realLocation = window.location;
+      const origin = M.originalOrigin;
+      const proxy = new Proxy(realLocation, {
+        get(t, p) {
+          if (p === 'origin') return origin;
+          if (p === 'host')   return new URL(origin).host;
+          if (p === 'hostname') return new URL(origin).hostname;
+          if (p === 'protocol') return new URL(origin).protocol;
+          const v = t[p];
+          return typeof v === 'function' ? v.bind(t) : v;
+        },
+      });
+      // Some envs forbid this — wrap in try.
+      try { Object.defineProperty(window, 'location', { configurable: true, get: () => proxy }); } catch {}
+      log('strictOrigin enabled', origin);
+    } catch (e) { log('origin patch failed', e); }
+  }
+
+  // ── 3. Helpers
+  const replayKey = (method, urlStr) => `${(method || 'GET').toUpperCase()} ${urlStr}`;
+  const isMirroredHost = (host) => M.mirroredHosts && M.mirroredHosts.some(h => host === h || host.endsWith('.' + h));
+  const replayLookup = (method, urlStr) => {
+    const k = replayKey(method, urlStr);
+    if (M.apiReplay && M.apiReplay[k]) return M.apiReplay[k];
+    // also try without query string
+    try {
+      const u = new URL(urlStr);
+      const noQ = `${(method || 'GET').toUpperCase()} ${u.origin}${u.pathname}`;
+      if (M.apiReplay && M.apiReplay[noQ]) return M.apiReplay[noQ];
+    } catch {}
+    return null;
+  };
+  const absUrl = (u) => { try { return new URL(u, location.href).href; } catch { return u; } };
+
+  // ── 4. fetch interceptor
+  const realFetch = window.fetch ? window.fetch.bind(window) : null;
+  if (realFetch) {
+    window.fetch = async function (input, init) {
+      try {
+        const req = (typeof input === 'object' && input && typeof input.url === 'string') ? input : null;
+        const urlStr = absUrl(req ? req.url : String(input));
+        const method = (init && init.method) || (req && req.method) || 'GET';
+        const u = new URL(urlStr);
+
+        // Same-host as the mirror? Pass through.
+        if (u.origin === location.origin) {
+          return realFetch(input, init);
+        }
+        // Captured API replay should win over generic host rewrites, especially
+        // for query-heavy endpoints whose local filenames include hash suffixes.
+        const replay = replayLookup(method, urlStr);
+        if (replay) {
+          log('replay', method, urlStr, '->', replay);
+          return realFetch(replay, { method: 'GET' });
+        }
+        // Mirrored host? Rewrite to local equivalent (the entry HTML rewriter
+        // already did this for static assets, but runtime fetches might use
+        // absolute URLs computed in JS).
+        if (isMirroredHost(u.hostname)) {
+          const local = '/' + u.hostname + u.pathname + (u.search ? '__q' + simpleHash(u.search.slice(1)) : '');
+          log('rewrite fetch ->', local);
+          return realFetch(local, init);
+        }
+        // Unknown cross-origin: still attempt — Puppeteer captured CORS-allowed
+        // responses already; if this one wasn't captured it'll just fail.
+        log('passthrough', method, urlStr);
+        return realFetch(input, init);
+      } catch (e) {
+        log('fetch shim error, falling back', e);
+        return realFetch(input, init);
+      }
+    };
+  }
+
+  // ── 5. XMLHttpRequest interceptor
+  if (window.XMLHttpRequest) {
+    const RealXHR = window.XMLHttpRequest;
+    const proto = RealXHR.prototype;
+    const open = proto.open;
+    const send = proto.send;
+    proto.open = function (method, url, async, user, pw) {
+      this.__mirror_method = method;
+      this.__mirror_url = absUrl(url);
+      try {
+        const u = new URL(this.__mirror_url);
+        const replay = replayLookup(method, this.__mirror_url);
+        if (replay) {
+          log('replay XHR', method, this.__mirror_url, '->', replay);
+          return open.call(this, 'GET', replay, async !== false, user, pw);
+        }
+        if (u.origin !== location.origin && isMirroredHost(u.hostname)) {
+          const local = '/' + u.hostname + u.pathname + (u.search ? '__q' + simpleHash(u.search.slice(1)) : '');
+          log('rewrite XHR ->', local);
+          return open.call(this, method, local, async !== false, user, pw);
+        }
+      } catch {}
+      return open.call(this, method, url, async, user, pw);
+    };
+    proto.send = function (body) { return send.call(this, body); };
+  }
+
+  // ── 6. WebSocket — Phase-4 fix #2.
+  //       Strategy:
+  //         1. If the WS host is mirrored, use the real WS (bytes already proxied).
+  //         2. Else if we have a captured frame log for this URL in M.wsReplay,
+  //            fetch it and replay: dispatch 'open' on next tick, then schedule
+  //            each 'received' frame as a 'message' event preserving original
+  //            inter-frame timing (delta from frame[0].timestamp).
+  //         3. Else fall back to the original silent stub.
+  if (window.WebSocket) {
+    const RealWS = window.WebSocket;
+    const wsReplay = (M.wsReplay && typeof M.wsReplay === 'object') ? M.wsReplay : {};
+
+    function makeReplayingWS(urlArg) {
+      const target = new EventTarget();
+      target.url = urlArg;
+      target.readyState = 0;
+      target.bufferedAmount = 0;
+      target.binaryType = 'blob';
+      target.protocol = '';
+      target.extensions = '';
+      target.send = () => {};
+      target.close = () => {
+        if (target.readyState === 3) return;
+        target.readyState = 3;
+        try { target.dispatchEvent(new Event('close')); } catch {}
+        if (typeof target.onclose === 'function') { try { target.onclose(new Event('close')); } catch {} }
+      };
+      target.CONNECTING = 0; target.OPEN = 1; target.CLOSING = 2; target.CLOSED = 3;
+
+      // onmessage / onopen / onclose / onerror compatibility — install setters
+      // that route through addEventListener so legacy code still receives.
+      ['open','message','close','error'].forEach(ev => {
+        let handler = null;
+        Object.defineProperty(target, 'on' + ev, {
+          configurable: true,
+          get() { return handler; },
+          set(fn) {
+            if (handler) target.removeEventListener(ev, handler);
+            handler = typeof fn === 'function' ? fn : null;
+            if (handler) target.addEventListener(ev, handler);
+          },
+        });
+      });
+
+      const replayPath = wsReplay[urlArg];
+      log('WebSocket replay:', urlArg, '->', replayPath);
+      // Fetch the captured frames, then schedule.
+      Promise.resolve()
+        .then(() => fetch(replayPath))
+        .then(r => r.ok ? r.json() : [])
+        .then((frames) => {
+          if (target.readyState === 3) return; // closed before open
+          target.readyState = 1;
+          try { target.dispatchEvent(new Event('open')); } catch {}
+          if (!Array.isArray(frames) || frames.length === 0) return;
+          const t0 = frames[0].timestamp || 0;
+          frames.forEach((f) => {
+            if (f.frame !== 'received') return;
+            const delayMs = Math.max(0, ((f.timestamp || t0) - t0) * 1000);
+            setTimeout(() => {
+              if (target.readyState !== 1) return;
+              try {
+                const ev = new MessageEvent('message', { data: f.payload });
+                target.dispatchEvent(ev);
+              } catch {}
+            }, delayMs);
+          });
+        })
+        .catch((e) => {
+          log('WS replay fetch failed', urlArg, e);
+          // Best-effort: still dispatch open so consumers don't hang on connect.
+          if (target.readyState !== 3) {
+            target.readyState = 1;
+            try { target.dispatchEvent(new Event('open')); } catch {}
+          }
+        });
+
+      return target;
+    }
+
+    function makeSilentWS(urlArg) {
+      const target = new EventTarget();
+      target.url = urlArg;
+      target.readyState = 0;
+      target.send = () => {};
+      target.close = () => {
+        target.readyState = 3;
+        try { target.dispatchEvent(new Event('close')); } catch {}
+      };
+      target.CONNECTING = 0; target.OPEN = 1; target.CLOSING = 2; target.CLOSED = 3;
+      return target;
+    }
+
+    function ShimWS(urlArg, protocols) {
+      try {
+        const u = new URL(urlArg);
+        if (isMirroredHost(u.hostname)) return new RealWS(urlArg, protocols);
+      } catch {}
+      if (wsReplay[urlArg]) return makeReplayingWS(urlArg);
+      log('WebSocket stubbed (no replay):', urlArg);
+      return makeSilentWS(urlArg);
+    }
+    ShimWS.CONNECTING = 0; ShimWS.OPEN = 1; ShimWS.CLOSING = 2; ShimWS.CLOSED = 3;
+    window.WebSocket = ShimWS;
+  }
+
+  // ── 7. EventSource (SSE) — stub
+  if (window.EventSource) {
+    const RealES = window.EventSource;
+    function ShimES(urlArg, init) {
+      try {
+        const u = new URL(urlArg, location.href);
+        if (u.origin === location.origin || isMirroredHost(u.hostname)) return new RealES(urlArg, init);
+      } catch {}
+      log('EventSource stubbed:', urlArg);
+      const t = new EventTarget();
+      t.url = urlArg;
+      t.readyState = 0;
+      t.close = () => { t.readyState = 2; };
+      t.CONNECTING = 0; t.OPEN = 1; t.CLOSED = 2;
+      return t;
+    }
+    ShimES.CONNECTING = 0; ShimES.OPEN = 1; ShimES.CLOSED = 2;
+    window.EventSource = ShimES;
+  }
+
+  // ── 7b. Runtime SRI patch — Phase-4 fix #3b.
+  //        Some apps inject <script> / <link> elements at runtime and set the
+  //        `integrity` attribute via property setter. Our mirror has rewritten
+  //        bytes so the original hashes will mismatch and the browser rejects
+  //        the resource. We override the setters on HTMLScriptElement and
+  //        HTMLLinkElement prototypes to drop the value when the resolved URL
+  //        points at a mirrored host (which, post-rewrite, includes our own
+  //        location.origin).
+  try {
+    const patchIntegrity = (Ctor, urlProp) => {
+      if (!Ctor || !Ctor.prototype) return;
+      const proto = Ctor.prototype;
+      const desc = Object.getOwnPropertyDescriptor(proto, 'integrity')
+                || Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'integrity');
+      const origSet = desc && desc.set;
+      const origGet = desc && desc.get;
+      const shouldDrop = (el) => {
+        try {
+          const raw = el && el[urlProp];
+          if (!raw) return true; // no URL yet → safer to drop
+          const u = new URL(raw, location.href);
+          if (u.origin === location.origin) return true;
+          return isMirroredHost(u.hostname);
+        } catch { return true; }
+      };
+      Object.defineProperty(proto, 'integrity', {
+        configurable: true,
+        enumerable: true,
+        get() { return origGet ? origGet.call(this) : (this.getAttribute('integrity') || ''); },
+        set(v) {
+          if (shouldDrop(this)) {
+            log('integrity drop (runtime)', this.tagName, v);
+            try { this.removeAttribute('integrity'); } catch {}
+            return;
+          }
+          if (origSet) origSet.call(this, v);
+          else try { this.setAttribute('integrity', v); } catch {}
+        },
+      });
+      // Also intercept setAttribute('integrity', ...) for completeness.
+      const origSetAttr = proto.setAttribute || HTMLElement.prototype.setAttribute;
+      if (origSetAttr) {
+        proto.setAttribute = function (name, value) {
+          if (typeof name === 'string' && name.toLowerCase() === 'integrity' && shouldDrop(this)) {
+            log('integrity drop (setAttribute)', this.tagName, value);
+            return;
+          }
+          return origSetAttr.call(this, name, value);
+        };
+      }
+    };
+    if (typeof HTMLScriptElement !== 'undefined') patchIntegrity(HTMLScriptElement, 'src');
+    if (typeof HTMLLinkElement   !== 'undefined') patchIntegrity(HTMLLinkElement,   'href');
+  } catch (e) { log('integrity patch failed', e); }
+
+  // ── 8. Helper: 32-bit FNV-1a hash for query-string filenames. Must match
+  //       the host-side filename hashing in mirror.mjs (md5 first 8 chars).
+  //       We only use this for fallback runtime URL rewrites; if it doesn't
+  //       match, fetch falls through to passthrough (still works for most cases).
+  function simpleHash(s) {
+    // Browser-side equivalent of md5().slice(0,8) is impractical; use a
+    // deterministic short hash and accept that some runtime URL rewrites
+    // miss. Returning empty string makes us fall back to no-query filename.
+    return '';
+  }
+
+  log('mirror shim active');
+})();</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TODO: Set the document title to the name of your application -->
+    <title>Saiyam &amp; Jenny - Wedding Invitation</title>
+    <meta name="description" content="Saiyam &amp; Jenny - Wedding Invitation · 7th July 2026">
+    <meta name="author" content="Lovable" />
+    <link rel="preload" href="/saiyam-jenny.invitationmedia.in/fonts/Candlescript.otf" as="font" type="font/otf" crossorigin />
+
+    <!-- TODO: Update og:title to match your application name -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/vIqaRTSLkYaT047ILJV8fuelrRc2/social-images/social-1782198798799-Media.webp">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/vIqaRTSLkYaT047ILJV8fuelrRc2/social-images/social-1782198798799-Media.webp">
+    
+    
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Saiyam &amp; Jenny - Wedding Invitation">
+  <meta name="twitter:title" content="Saiyam &amp; Jenny - Wedding Invitation">
+  <meta property="og:description" content="Saiyam &amp; Jenny - Wedding Invitation · 7th July 2026">
+  <meta name="twitter:description" content="Saiyam &amp; Jenny - Wedding Invitation · 7th July 2026">
+  <script type="module" crossorigin src="/saiyam-jenny.invitationmedia.in/assets/index-CNKK6fD1.js"></script>
+  <link rel="stylesheet" crossorigin href="/saiyam-jenny.invitationmedia.in/assets/index-Dbi39HCJ.css">
+<script defer src="/saiyam-jenny.invitationmedia.in/~flock.js" data-proxy-url="/~api/analytics"></script></head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

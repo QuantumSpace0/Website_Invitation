@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 3,
+  "url": "https://saiyam-jenny.invitationmedia.in/",
+  "slug": "job-ihz7tai5",
+  "title": "Wedding Invitation",
+  "runAt": "2026-08-19T08:56:14.748Z",
+  "elapsedSec": 131.9,
+  "level": {
+    "requested": "auto",
+    "chosen": "runtime-preserve-source",
+    "deliverable": "React/Next wrapper around exact preserved runtime",
+    "reasoning": "Runtime classifier selected visual-spec (low confidence): browser exposes WebGL/WebGL2 capability. Emitting a React wrapper around the exact mirror instead of an approximate DOM scaffold.",
+    "classifier": {
+      "confidence": "low",
+      "framerDetected": false,
+      "sourceMapsAvailable": false,
+      "reactDetected": true,
+      "isLikelyStatic": false,
+      "signals": [
+        {
+          "name": "probe.reactComponents",
+          "value": 386,
+          "weight": 3,
+          "contributesTo": "reactDetected"
+        },
+        {
+          "name": "decision.level",
+          "value": "editable-scaffold",
+          "weight": 5,
+          "contributesTo": "level"
+        },
+        {
+          "name": "decision.confidence",
+          "value": "low",
+          "weight": 1,
+          "contributesTo": "level"
+        }
+      ]
+    }
+  },
+  "stages": {
+    "probe": {
+      "libraries": 1,
+      "sourceMaps": 0
+    },
+    "mirror": {
+      "captured": 9,
+      "bytes": 615724,
+      "skippedTelemetry": 0,
+      "skippedFailed": 0,
+      "skippedTooLarge": 0,
+      "apiReplays": 1,
+      "requestErrors": 0,
+      "wsCaptured": 0,
+      "wsFrames": 0
+    },
+    "framerRecover": {
+      "ran": false
+    },
+    "framerSiteInventory": {
+      "ran": false
+    },
+    "unpack": {
+      "ran": false
+    },
+    "analyze": {
+      "ran": false
+    },
+    "reconstruct": {
+      "ran": false
+    },
+    "runtimePreserveSource": {
+      "mode": "runtime-preserve-source",
+      "mirrorPath": "/app/sites/job-ihz7tai5/source/public/_mirror",
+      "mirroredHosts": 3,
+      "rewrites": 6,
+      "runtimeMode": "visual-spec",
+      "mirrorEntryPath": "/_mirror/saiyam-jenny.invitationmedia.in/index.html",
+      "semanticRuntime": {
+        "mode": "semantic-runtime-reconstruct",
+        "specialization": "unknown-runtime",
+        "readableModules": 0,
+        "editableRuntimeConstants": false,
+        "fullSemanticGamePort": false
+      }
+    },
+    "staticPreserve": {
+      "ran": false
+    },
+    "buildCheck": {
+      "installSucceeded": true,
+      "buildSucceeded": true,
+      "installDurationMs": 12072,
+      "buildDurationMs": 21323,
+      "nextBuildOutputSize": 24584824
+    },
+    "observe": {
+      "schemaVersion": 1,
+      "url": "https://saiyam-jenny.invitationmedia.in/",
+      "styles": {
+        "stylesheets": 2,
+        "rules": 898,
+        "keyframes": 18,
+        "mediaQueries": 6,
+        "containerQueries": 0,
+        "cssVariables": 376,
+        "variableReferences": 750,
+        "cssInJsBlocks": 1
+      },
+      "animations": {
+        "keyframes": 18,
+        "animationRules": 0,
+        "transitionRules": 0,
+        "scrollListeners": 5,
+        "intersectionObservers": 0,
+        "webAnimations": 0,
+        "requestAnimationFrame": 0
+      },
+      "runtime": {
+        "mode": "visual-spec",
+        "confidence": "low",
+        "score": {
+          "runtime": 26,
+          "source": 12,
+          "static": 0
+        },
+        "reasons": [
+          "browser exposes WebGL/WebGL2 capability",
+          "1 fixed/full-screen runtime layer(s)",
+          "runtime signals exist but are too weak for confident preservation"
+        ],
+        "summary": {
+          "canvasCount": 0,
+          "videoCount": 1,
+          "webglAvailable": true,
+          "webglContextCanvases": 0,
+          "engines": [],
+          "rafAppFired": 0,
+          "rafFpsApprox": 0,
+          "shaderMatches": 0,
+          "fullscreenRuntimeLayers": 1,
+          "videoCanvasOverlays": 0
+        }
+      },
+      "files": {
+        "stylesJson": "styles.json",
+        "stylesMd": "styles.md",
+        "animationsJson": "animations.json",
+        "animationsMd": "animations.md",
+        "runtimeJson": "runtime_classification.json",
+        "runtimeMd": "runtime_classification.md"
+      }
+    },
+    "behavior": {
+      "ran": false
+    },
+    "evidence": {
+      "ran": false
+    },
+    "verify": {
+      "overallMismatchPct": 7.532399327990667,
+      "overallStructuralMatchPct": 38.46153846153847,
+      "sectionDiffs": {
+        "count": 1,
+        "overallMismatchPct": 9.665586419753087,
+        "worst": [
+          {
+            "id": "viewport-0",
+            "name": "viewport 1",
+            "mismatchPct": 9.665586419753087,
+            "quadrants": {
+              "topLeft": 2.606172839506173,
+              "topRight": 6.311111111111112,
+              "bottomLeft": 11.743518518518519,
+              "bottomRight": 18.001543209876544
+            }
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "name": "desktop",
+          "mismatchPct": 9.690123456790122,
+          "structuralMatchPct": 38.46153846153847
+        },
+        {
+          "name": "tablet",
+          "mismatchPct": 6.706746419270833,
+          "structuralMatchPct": 38.46153846153847
+        },
+        {
+          "name": "mobile",
+          "mismatchPct": 6.200328107911046,
+          "structuralMatchPct": 38.46153846153847
+        }
+      ]
+    },
+    "sourceVerify": {
+      "overallMismatchPct": 0,
+      "baseline": "fixed local mirror runtime",
+      "candidate": "generated runtime-preserve source wrapper",
+      "states": [
+        {
+          "name": "pointer-drag",
+          "appliedRate": 1,
+          "avgMismatchPct": 0
+        }
+      ]
+    },
+    "design": {
+      "stats": {
+        "colors": 5,
+        "typographyStyles": 2,
+        "spacingValues": 3,
+        "radii": 0,
+        "shadows": 1,
+        "buttons": 0,
+        "links": 0,
+        "inputs": 0,
+        "breakpoints": 4
+      },
+      "jsonPath": "design/design-system.json",
+      "dtcgPath": "design/tokens.dtcg.json",
+      "designMdPath": "DESIGN.md"
+    },
+    "research": {
+      "ran": false
+    },
+    "deliverableContract": {
+      "passed": true,
+      "blockers": 0,
+      "warnings": 0,
+      "reportPath": "recovery-report.md",
+      "jsonPath": "deliverable-contract.json"
+    }
+  },
+  "honestAssessment": [
+    "source/ is a React+Next runtime-preserve wrapper. It keeps the exact mirror runtime as the pixel-perfect surface and exposes editable shell files plus source/design.md.",
+    "DOM structure match low (38.5%) — significant divergence; inspect verify/diff-report.html.",
+    "Runtime classifier recommends visual-spec (low confidence): browser exposes WebGL/WebGL2 capability.",
+    "Runtime-preserve source generated with 3 mirrored host rewrite(s). Edit shell code in source/app and source/components; keep the iframe until a native rebuild passes verify.",
+    "Source wrapper verification passed at 0.00% mismatch with interaction state(s): pointer-drag.",
+    "Deliverable contract passed. recovery-report.md is the authoritative provenance and quality summary."
+  ]
+}
